@@ -24,15 +24,24 @@ window.addEventListener('load', function() {
 })
 
 window.addEventListener('scroll', function (event) {
-//    let element = event.target;
-//    console.log(event);
-    console.log(`innerheight ${window.innerHeight}`);
-    console.log(`y off ${window.pageYOffset}`);
-    if (window.pageYOffset === window.innerHeight)
+    // grabbing the entire document (or inner window) size
+    let doc = document.documentElement;
+    console.log('docu size' +d);
+    var offset = doc.scrollTop + window.innerHeight;
+    console.log('offset: doc scrollTop: ' + doc.scrollTop + ' win.innerHeight: ' + window.innerHeight + ' = offset: ' + offset)
+    var height = doc.offsetHeight;
+
+    console.log('offset = ' + offset);
+    console.log('height = ' + height);
+
+    if (offset === height)
     {
         alert('Please accept our offers!');
     }
+    
 });
+
+
 
 // Drag and receive Doggo
 const doggoDragPhoto = document.querySelectorAll ('.img-content > img')[0];
