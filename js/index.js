@@ -8,7 +8,7 @@ signUpButton.forEach(each => {
     each.style.color = 'red';})
 })
 
-// Doubleclick on page, receive dog, ????, profit
+// Doubleclick on page, receive sunset, ????, profit
 const bodyWork = document.querySelector('body')
 
 bodyWork.addEventListener('dblclick', function () {
@@ -17,6 +17,34 @@ bodyWork.addEventListener('dblclick', function () {
     bodyWork.style.backgroundImage.width = '10%';
     console.log('hi')
 })
+
+// Loading pop up image
+// window.addEventListener('load', function() {
+
+// })
+
+// Scroll Down pop up
+// window.addEventListener('scroll', function (){
+//     last_known_scroll_position = window.scrollY;
+
+//     if (!ticking) {
+//       window.requestAnimationFrame(function() {
+//         alert(last_known_scroll_position);
+//         ticking = false;
+//       });
+  
+//       ticking = true;
+//     }
+//   });
+// })
+
+// Drag and receive Doggo
+const doggoDragPhoto = document.querySelectorAll ('.img-content > img')[0];
+
+doggoDragPhoto.addEventListener ('drag', function () {
+    doggoDragPhoto.style.src = 'img/DSC_0224.jpg'
+})
+
 
 // Rotate Bus Image by Scroll
 const busImage = document.querySelector('.intro > img')
