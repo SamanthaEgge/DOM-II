@@ -19,30 +19,27 @@ bodyWork.addEventListener('dblclick', function () {
 })
 
 // Loading pop up image
-// window.addEventListener('load', function() {
+window.addEventListener('load', function() {
+    alert('Page has loaded!')
+})
 
-// })
-
-// Scroll Down pop up
-// window.addEventListener('scroll', function (){
-//     last_known_scroll_position = window.scrollY;
-
-//     if (!ticking) {
-//       window.requestAnimationFrame(function() {
-//         alert(last_known_scroll_position);
-//         ticking = false;
-//       });
-  
-//       ticking = true;
-//     }
-//   });
-// })
+window.addEventListener('scroll', function (event) {
+//    let element = event.target;
+//    console.log(event);
+    console.log(`innerheight ${window.innerHeight}`);
+    console.log(`y off ${window.pageYOffset}`);
+    if (window.pageYOffset === window.innerHeight)
+    {
+        alert('Please accept our offers!');
+    }
+});
 
 // Drag and receive Doggo
 const doggoDragPhoto = document.querySelectorAll ('.img-content > img')[0];
 
 doggoDragPhoto.addEventListener ('drag', function () {
-    doggoDragPhoto.style.src = 'img/DSC_0224.jpg'
+    doggoDragPhoto.style.src = '../img/DSC_0224.jpg'
+    return false;
 })
 
 
